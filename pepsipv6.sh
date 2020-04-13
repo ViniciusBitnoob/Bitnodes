@@ -37,7 +37,7 @@ sleep 3
 cd
 git clone https://github.com/circulosmeos/gdown.pl.git
 cd .peps
-~/gdown.pl/gdown.pl https://drive.google.com/file/d/1MUKKG6Ray_JWu_B9Qhiz1HhgnwPhgf8z/view peps.zip
+~/gdown.pl/gdown.pl https://drive.google.com/file/d/1gexbs0DkViU0CcKsQvNA5MDTy03TG82y/view peps.zip
 unzip peps.zip
 rm -r peps.zip
 cd

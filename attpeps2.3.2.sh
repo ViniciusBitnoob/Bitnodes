@@ -19,7 +19,8 @@ sleep 3
 echo "Executando node..."
 ./pepsd -listen=0
 echo "Aguardando sincronização dos blocos..."
-sleep 20
+sleep 50
 ./peps-cli getinfo
 ./peps-cli masternode status
+cd
 rm -r attpeps2.3.2.sh

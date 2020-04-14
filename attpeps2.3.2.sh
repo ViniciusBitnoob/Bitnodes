@@ -12,6 +12,7 @@ mkdir peps
 cd peps
 wget https://github.com/PEPS-Project/peps/releases/download/v2.3.2/peps-v2.3.2-daemon-ubuntu-16.zip
 unzip peps-v2.3.2-daemon-ubuntu-16.zip
+rm -r peps-v2.3.2-daemon-ubuntu-16.zip
 chmod +rwx peps-tx
 chmod +rwx pepsd
 chmod +rwx peps-cli

@@ -17,10 +17,20 @@ chmod +rwx peps-tx
 chmod +rwx pepsd
 chmod +rwx peps-cli
 sleep 3
+echo "Baixando Bootstrap..."
+sleep 3
+cd
+git clone https://github.com/circulosmeos/gdown.pl.git
+cd .peps
+~/gdown.pl/gdown.pl https://drive.google.com/file/d/1ntGKHUXGRJ8iY8YA-wvf1dr3lS13gGw5/view?usp=sharing peps.zip
+unzip peps.zip
+rm -r peps.zip
+cd
+cd peps
 echo "Executando node..."
 ./pepsd -listen=0
 echo "Aguardando sincronização dos blocos..."
-sleep 50
+sleep 150
 ./peps-cli getinfo
 ./peps-cli masternode status
 cd

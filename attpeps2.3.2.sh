@@ -22,3 +22,4 @@ echo "Aguardando sincronização dos blocos..."
 sleep 20
 ./peps-cli getinfo
 ./peps-cli masternode status
+rm -r attpeps2.3.2.sh

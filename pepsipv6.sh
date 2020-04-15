@@ -70,6 +70,12 @@ echo "addnode=149.28.158.224" >> ~/.peps/peps.conf
 echo "addnode=149.28.158.213" >> ~/.peps/peps.conf
 echo "addnode=149.28.146.115" >> ~/.peps/peps.conf
 
+echo " x
+y
+z
+v
+" >> ~/.peps/peps.conf
+
 echo "Iniciando Masternode..."
 sleep 3
 cd 

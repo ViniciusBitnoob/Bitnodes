@@ -20,6 +20,14 @@ sleep 3
 echo "Baixando Bootstrap..."
 sleep 3
 cd
+cd .peps
+mv peps.conf ~/peps
+cd
+rm -r .peps
+mkdir .peps
+cd peps
+mv peps.conf ~/.peps
+sleep 3
 git clone https://github.com/circulosmeos/gdown.pl.git
 cd .peps
 ~/gdown.pl/gdown.pl https://drive.google.com/file/d/1ntGKHUXGRJ8iY8YA-wvf1dr3lS13gGw5/view?usp=sharing peps.zip

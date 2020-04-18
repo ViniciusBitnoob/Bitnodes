@@ -73,7 +73,7 @@ echo "addnode=149.28.158.224" >> ~/.peps/peps.conf
 echo "addnode=149.28.158.213" >> ~/.peps/peps.conf
 echo "addnode=149.28.146.115" >> ~/.peps/peps.conf
 
-echo " x
+echo "
 addnode=116.203.57.114:60192
 addnode=138.201.251.147:35492
 addnode=144.76.196.102:32824

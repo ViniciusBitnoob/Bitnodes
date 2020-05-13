@@ -16,6 +16,8 @@ sudo apt install rar
 echo "Limpando arquivos de instalações anteriores..."
 sleep 3
 cd
+cd peps ./peps-cli stop
+cd
 rm -r peps
 rm -r .peps
 

@@ -7,6 +7,8 @@ echo " CONHEÇA NOSSO CANAL EM WWW.YOUTUBE.COM/BITNOOB"
 sleep 3
 echo "Será iniciado a Instalação/Montagem do Masternode de Nioshare p/ Linux Ubunto 18.04"
 sleep 3
+acho "Versão da Wallet v1.0.0.1"
+sleep 3
 echo "Atualizando e Instalando Pré-Requisitos..."
 sleep 3 
 sudo apt-get update && sudo apt-get upgrade
@@ -41,19 +43,25 @@ echo "Limpando arquivos de instalações anteriores..."
 sleep 3
 cd
 rm -r nio
-rm -r .nio
+rm -r .nioshares
 
 
 echo "Instalando Node..."
 sleep 3
 cd
-mkdir peps
-cd peps
-wget https://github.com/PEPS-Project/peps/releases/download/v2.3-rev2/peps-daemon.zip
-unzip peps-daemon.zip
-./pepsd &
+mkdir nio
+cd nio
+wget https://github.com/nioshares/nioshares-coin/releases/download/V1.0.0.1/nioshares-daemon-linux.tar.gz
+wget https://github.com/nioshares/nioshares-coin/releases/download/V1.0.0.1/nioshares-qt-linux.tar.gz
+tar -xzvf nioshares-daemon-linux.tar.gz
+tar -xzvf nioshares-qt-linux.tar.gz
+rm -r nioshares-daemon-linux.tar.gz
+rm -r nioshares-qt-linux.tar.gz
+rm -r nioshares-qt
+rm -r nioshares-tx
+~/nio/./niosharesd &
 sleep 20
-./peps-cli stop
+~/nio/./nioshares-cli stop
 
 ipvps=$(curl -s4 icanhazip.com)
 
@@ -64,7 +72,6 @@ read genkey
 
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.peps/peps.conf
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.peps/peps.conf
-echo "rpcport=16262" >> ~/.peps/peps.conf
 echo "externalip="$ipvps >> ~/.peps/peps.conf
 echo "masternodeprivkey="$genkey >> ~/.peps/peps.conf
 echo "rpcallowip=127.0.0.1" >> ~/.peps/peps.conf
@@ -75,7 +82,7 @@ echo "masternode=1" >> ~/.peps/peps.conf
 echo "bind="$ipvps >> ~/.peps/peps.conf
 echo "masternodeaddr="$ipvps:15252 >> ~/.peps/peps.conf
 echo "logtimestamps=1" >> ~/.peps/peps.conf
-echo "port=15252" >> ~/.peps/peps.conf
+echo "port=21392" >> ~/.peps/peps.conf
 
 
 echo "Iniciando Masternode..."

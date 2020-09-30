@@ -7,7 +7,7 @@ echo " CONHEÇA NOSSO CANAL EM WWW.YOUTUBE.COM/BITNOOB"
 sleep 3
 echo "Será iniciado a Instalação/Montagem do Masternode de Nioshare p/ Linux Ubunto 18.04"
 sleep 3
-acho "Versão da Wallet v1.0.0.1"
+echo "   >>>   Versão da Wallet v1.0.0.1   <<<"
 sleep 3
 echo "Atualizando e Instalando Pré-Requisitos..."
 sleep 3 

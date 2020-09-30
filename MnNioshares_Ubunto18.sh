@@ -90,6 +90,17 @@ sleep 3
 ~/nio/./niosharesd &
 sleep 30
 ~/nio/./nioshares-cli mnsync status
+sleep 5
+echo "Qual o rótulo da sua Wallet do masternode?"
+read alias
+echo "Qual txid do seu Masternode?"
+read txid
+echo "Qual o output do texid? 0 ou 1 ?"
+read output
+echo "Sua linha de configuração do masternode é:"
+echo $alias $ipvps:21392 $genkey $txid $output
+sleep 3
+echo "Copie e cole dentro do seu arquivo masternode.conf"
 echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
 echo "Caso não for true, aguarde mais alguns minutos e use os comandos"
 echo "~/nio/./nioshares-cli mnsync status"

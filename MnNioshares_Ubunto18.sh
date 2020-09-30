@@ -70,19 +70,19 @@ echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 
-echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.peps/peps.conf
-echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.peps/peps.conf
-echo "externalip="$ipvps >> ~/.peps/peps.conf
-echo "masternodeprivkey="$genkey >> ~/.peps/peps.conf
-echo "rpcallowip=127.0.0.1" >> ~/.peps/peps.conf
-echo "listen=1" >> ~/.peps/peps.conf
-echo "server=1" >> ~/.peps/peps.conf
-echo "daemon=1" >> ~/.peps/peps.conf
-echo "masternode=1" >> ~/.peps/peps.conf
-echo "bind="$ipvps >> ~/.peps/peps.conf
-echo "masternodeaddr="$ipvps:15252 >> ~/.peps/peps.conf
-echo "logtimestamps=1" >> ~/.peps/peps.conf
-echo "port=21392" >> ~/.peps/peps.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/..nioshares/nioshares.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/..nioshares/nioshares.conf
+echo "externalip="$ipvps >> ~/..nioshares/nioshares.conf
+echo "masternodeprivkey="$genkey >> ~/..nioshares/nioshares.conf
+echo "rpcallowip=127.0.0.1" >> ~/..nioshares/nioshares.conf
+echo "listen=1" >> ~/..nioshares/nioshares.conf
+echo "server=1" >> ~/..nioshares/nioshares.conf
+echo "daemon=1" >> ~/..nioshares/nioshares.conf
+echo "masternode=1" >> ~/..nioshares/nioshares.conf
+echo "bind="$ipvps >> ~/..nioshares/nioshares.conf
+echo "masternodeaddr="$ipvps:15252 >> ~/..nioshares/nioshares.conff
+echo "logtimestamps=1" >> ~/..nioshares/nioshares.conf
+echo "port=21392" >> ~/..nioshares/nioshares.conf
 
 
 echo "Iniciando Masternode..."
@@ -97,10 +97,13 @@ echo "Qual txid do seu Masternode?"
 read txid
 echo "Qual o output do texid? 0 ou 1 ?"
 read output
+echo "   "
 echo "Sua linha de configuração do masternode é:"
 echo $alias $ipvps:21392 $genkey $txid $output
-sleep 3
+sleep 5
+echo "   "
 echo "Copie e cole dentro do seu arquivo masternode.conf"
+echo "   "
 echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
 echo "Caso não for true, aguarde mais alguns minutos e use os comandos"
 echo "~/nio/./nioshares-cli mnsync status"
@@ -109,8 +112,10 @@ echo "Deverá usar o comando a baixo no console de sua wallet windows para dar s
 echo "startmasternode alias false (nomedoalias)"
 echo "Exemplo: startmasternode alias false mn1"
 echo "Se o status da resposta for: Successfully ou algo relacionado, o masternode iniciou e é so aguardar."
-echo "TE AJUDEI???? NOS AJUDE TAMBEM, FAÇA UMA DOAÇÃO, ASSIM NOS MOTIVA A ATUALIZAR E MELHORAR OS SCRIPTS!!!"
-echo "WALLET NIO:  NfJvmMLBf8hnzwAr5odG3D7o2nyK84NRbW"
+echo "   "
+echo ">>>> TE AJUDEI???? NOS AJUDE TAMBEM, FAÇA UMA DOAÇÃO, ASSIM NOS MOTIVA A ATUALIZAR E MELHORAR OS SCRIPTS!!!<<<<"
+echo ">>>>    WALLET NIO:  NfJvmMLBf8hnzwAr5odG3D7o2nyK84NRbW    <<<<"
+echo "   "
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
 cd
 rm -r MnNioshares_Ubunto18.sh

@@ -70,19 +70,19 @@ echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 
-echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/..nioshares/nioshares.conf
-echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/..nioshares/nioshares.conf
-echo "externalip="$ipvps >> ~/..nioshares/nioshares.conf
-echo "masternodeprivkey="$genkey >> ~/..nioshares/nioshares.conf
-echo "rpcallowip=127.0.0.1" >> ~/..nioshares/nioshares.conf
-echo "listen=1" >> ~/..nioshares/nioshares.conf
-echo "server=1" >> ~/..nioshares/nioshares.conf
-echo "daemon=1" >> ~/..nioshares/nioshares.conf
-echo "masternode=1" >> ~/..nioshares/nioshares.conf
-echo "bind="$ipvps >> ~/..nioshares/nioshares.conf
-echo "masternodeaddr="$ipvps:15252 >> ~/..nioshares/nioshares.conff
-echo "logtimestamps=1" >> ~/..nioshares/nioshares.conf
-echo "port=21392" >> ~/..nioshares/nioshares.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.nioshares/nioshares.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.nioshares/nioshares.conf
+echo "externalip="$ipvps >> ~/.nioshares/nioshares.conf
+echo "masternodeprivkey="$genkey >> ~/.nioshares/nioshares.conf
+echo "rpcallowip=127.0.0.1" >> ~/.nioshares/nioshares.conf
+echo "listen=1" >> ~/.nioshares/nioshares.conf
+echo "server=1" >> ~/.nioshares/nioshares.conf
+echo "daemon=1" >> ~/.nioshares/nioshares.conf
+echo "masternode=1" >> ~/.nioshares/nioshares.conf
+echo "bind="$ipvps >> ~/.nioshares/nioshares.conf
+echo "masternodeaddr="$ipvps:15252 >> ~/.nioshares/nioshares.conff
+echo "logtimestamps=1" >> ~/.nioshares/nioshares.conf
+echo "port=21392" >> ~/.nioshares/nioshares.conf
 
 
 echo "Iniciando Masternode..."

@@ -1,15 +1,15 @@
 #!/bin/bash
 
 cd
-echo "BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
+echo " BEM VINDO AOS SCRYPTS DO CANAL BITNOOB!!!"
 sleep 3 
 echo " CONHEÇA NOSSO CANAL EM WWW.YOUTUBE.COM/BITNOOB"
 sleep 3
-echo "Será iniciado a Instalação/Montagem do Masternode de Nioshare p/ Linux Ubunto 18.04"
+echo " Será iniciado a Instalação/Montagem do Masternode de Nioshare p/ Linux Ubunto 18.04"
 sleep 3
 echo "   >>>   Versão da Wallet v1.0.0.1   <<<"
 sleep 3
-echo "Atualizando e Instalando Pré-Requisitos..."
+echo " Atualizando e Instalando Pré-Requisitos..."
 sleep 3 
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install unzip nano -y
@@ -39,14 +39,14 @@ apt-get install pwgen
 apt-get install libzmq3-dev
 
 
-echo "Limpando arquivos de instalações anteriores..."
+echo " Limpando arquivos de instalações anteriores..."
 sleep 3
 cd
 rm -r nio
 rm -r .nioshares
 
 
-echo "Instalando Node..."
+echo " Instalando Node..."
 sleep 3
 cd
 mkdir nio
@@ -85,12 +85,10 @@ echo "logtimestamps=1" >> ~/.nioshares/nioshares.conf
 echo "port=21392" >> ~/.nioshares/nioshares.conf
 
 
-echo "Iniciando Masternode..."
+echo " Iniciando Masternode..."
 sleep 3
 ~/nio/./niosharesd &
 sleep 30
-~/nio/./nioshares-cli mnsync status
-sleep 5
 echo "Qual o rótulo da sua Wallet do masternode?"
 read alias
 echo "Qual txid do seu Masternode?"
@@ -98,23 +96,25 @@ read txid
 echo "Qual o output do texid? 0 ou 1 ?"
 read output
 echo "   "
-echo "Sua linha de configuração do masternode é:"
+echo " Sua linha de configuração do masternode é:"
 echo $alias $ipvps:21392 $genkey $txid $output
 sleep 5
 echo "   "
-echo "Copie e cole dentro do seu arquivo masternode.conf"
+echo " Copie e cole dentro do seu arquivo masternode.conf"
 echo "   "
-echo "Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
-echo "Caso não for true, aguarde mais alguns minutos e use os comandos"
+~/nio/./nioshares-cli mnsync status
+sleep 5
+echo " Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
+echo " Caso não for true, aguarde mais alguns minutos e use os comandos"
 echo "~/nio/./nioshares-cli mnsync status"
-echo "Faça isso de tempos em tempos até que ja esteja em true para iniciar o masternode na wallet em seu computador"
-echo "Deverá usar o comando a baixo no console de sua wallet windows para dar start no masternode, mas lembre-se de destravar sua wallet antes."
-echo "startmasternode alias false (nomedoalias)"
-echo "Exemplo: startmasternode alias false mn1"
-echo "Se o status da resposta for: Successfully ou algo relacionado, o masternode iniciou e é so aguardar."
+echo " Faça isso de tempos em tempos até que ja esteja em true para iniciar o masternode na wallet em seu computador"
+echo " Deverá usar o comando a baixo no console de sua wallet windows para dar start no masternode, mas lembre-se de destravar sua wallet antes."
+echo " startmasternode alias false (nomedoalias)"
+echo " Exemplo: startmasternode alias false mn1"
+echo " Se o status da resposta for: Successfully ou algo relacionado, o masternode iniciou e é so aguardar."
 echo "   "
-echo ">>>> TE AJUDEI???? NOS AJUDE TAMBEM, FAÇA UMA DOAÇÃO, ASSIM NOS MOTIVA A ATUALIZAR E MELHORAR OS SCRIPTS!!!<<<<"
-echo ">>>>    WALLET NIO:  NfJvmMLBf8hnzwAr5odG3D7o2nyK84NRbW    <<<<"
+echo "     >>>> TE AJUDEI???? NOS AJUDE TAMBEM, FAÇA UMA DOAÇÃO, ASSIM NOS MOTIVA A ATUALIZAR E MELHORAR OS SCRIPTS!!!<<<<"
+echo "                          >>>>    WALLET NIO:  NfJvmMLBf8hnzwAr5odG3D7o2nyK84NRbW    <<<<"
 echo "   "
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
 cd

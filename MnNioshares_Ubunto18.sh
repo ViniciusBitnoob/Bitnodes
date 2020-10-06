@@ -42,6 +42,7 @@ apt-get install libzmq3-dev
 echo " Limpando arquivos de instalações anteriores..."
 sleep 3
 cd
+~/nio/./nioshares-cli stop
 rm -r nio
 rm -r .nioshares
 

@@ -112,6 +112,8 @@ echo " Deverá usar o comando a baixo no console de sua wallet windows para dar 
 echo " startmasternode alias false (nomedoalias)"
 echo " Exemplo: startmasternode alias false mn1"
 echo " Se o status da resposta for: Successfully ou algo relacionado, o masternode iniciou e é so aguardar."
+echo " Para confirmar use o comando a baixo aqui na VPS, se obtiver a resposta Successfully, significa que está tudo certo"
+echo " ~/nio/./nioshares-cli getmasternodestatus"
 echo "   "
 echo "     >>>> TE AJUDEI???? NOS AJUDE TAMBEM, FAÇA UMA DOAÇÃO, ASSIM NOS MOTIVA A ATUALIZAR E MELHORAR OS SCRIPTS!!!<<<<"
 echo "                          >>>>    WALLET NIO:  NfJvmMLBf8hnzwAr5odG3D7o2nyK84NRbW    <<<<"

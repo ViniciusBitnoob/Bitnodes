@@ -81,7 +81,7 @@ echo "server=1" >> ~/.nioshares/nioshares.conf
 echo "daemon=1" >> ~/.nioshares/nioshares.conf
 echo "masternode=1" >> ~/.nioshares/nioshares.conf
 echo "bind="$ipvps >> ~/.nioshares/nioshares.conf
-echo "masternodeaddr="$ipvps:15252 >> ~/.nioshares/nioshares.conff
+echo "masternodeaddr="$ipvps:15252 >> ~/.nioshares/nioshares.conf
 echo "logtimestamps=1" >> ~/.nioshares/nioshares.conf
 echo "port=21392" >> ~/.nioshares/nioshares.conf
 
@@ -97,23 +97,27 @@ read txid
 echo "Qual o output do texid? 0 ou 1 ?"
 read output
 echo "   "
-echo " Sua linha de configuração do masternode é:"
+echo "                             >>>>> SUA LINHA DE CONFIGURAÇÃO DE MASTERNODE É: <<<<<"
 echo $alias $ipvps:21392 $genkey $txid $output
 sleep 5
 echo "   "
-echo " Copie e cole dentro do seu arquivo masternode.conf"
+echo "                        >>>>> COPIE E COLE-A NO SEU ARQUIVO DE CONFIGURAÇÃO DE MASTERNODE. <<<<<"
 echo "   "
-~/nio/./nioshares-cli mnsync status
-sleep 5
-echo " Se os parametros foram true e a transação na wallet do seu computador ja estiver confirmada, pode iniciar o Masternode"
-echo " Caso não for true, aguarde mais alguns minutos e use os comandos"
+echo "      >>>>> USE O COMANDO A BAIXO AQUI NA VPS, SE O PRIMEIRO RESULTADO FOR 'true', SIGNIFICA QUE JA PODE INICIAR NO WINDOWNS. <<<<<"
+echo " >>>>> SE NÃO FOR 'true', USE O COMANDO DE TEMPOS EM TEMPOR ATÉ CONFIRMAR A INFORMAÇÃO, APOS ISSO, INICIE O MASTERNODE NO DESKTOP. <<<<<"
+echo "   "
 echo "~/nio/./nioshares-cli mnsync status"
-echo " Faça isso de tempos em tempos até que ja esteja em true para iniciar o masternode na wallet em seu computador"
-echo " Deverá usar o comando a baixo no console de sua wallet windows para dar start no masternode, mas lembre-se de destravar sua wallet antes."
+echo "   "
+echo "   "
+echo "           >>>>> USE O COMANDO A BAIXO PARA INICIAR NO MASTERNODE NA DESKTOP WALLET! <<<<<"
+echo "   "
 echo " startmasternode alias false (nomedoalias)"
+echo "   "
 echo " Exemplo: startmasternode alias false mn1"
-echo " Se o status da resposta for: Successfully ou algo relacionado, o masternode iniciou e é so aguardar."
-echo " Para confirmar use o comando a baixo aqui na VPS, se obtiver a resposta Successfully, significa que está tudo certo"
+echo "   "
+echo "      >>>>>SE A REPOSTA DO COMANDO NO CONSOLE DA SUA WALLET FOR 'Successfully', SIGNIFICA QUE O START FOI FEITO. <<<<<"
+echo " >>>>> USE O COMANDO A BAIXO, AQUI NA VPS PARA CONFIRMAR, SE TE RETORNAR ALGO COMO 'Successfully' ESTÁ FUNCIONANDO!!! <<<<<  "
+echo "   "
 echo " ~/nio/./nioshares-cli getmasternodestatus"
 echo "   "
 echo "     >>>> TE AJUDEI???? NOS AJUDE TAMBEM, FAÇA UMA DOAÇÃO, ASSIM NOS MOTIVA A ATUALIZAR E MELHORAR OS SCRIPTS!!!<<<<"

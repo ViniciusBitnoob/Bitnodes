@@ -73,17 +73,33 @@ read genkey
 
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.nioshares/nioshares.conf
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.nioshares/nioshares.conf
-echo "externalip="$ipvps >> ~/.nioshares/nioshares.conf
 echo "masternodeprivkey="$genkey >> ~/.nioshares/nioshares.conf
 echo "rpcallowip=127.0.0.1" >> ~/.nioshares/nioshares.conf
 echo "listen=1" >> ~/.nioshares/nioshares.conf
 echo "server=1" >> ~/.nioshares/nioshares.conf
 echo "daemon=1" >> ~/.nioshares/nioshares.conf
 echo "masternode=1" >> ~/.nioshares/nioshares.conf
-echo "bind="$ipvps >> ~/.nioshares/nioshares.conf
 echo "masternodeaddr="$ipvps:15252 >> ~/.nioshares/nioshares.conf
+echo "maxconnections=36" >> ~/.nioshares/nioshares.conf
 echo "logtimestamps=1" >> ~/.nioshares/nioshares.conf
 echo "port=21392" >> ~/.nioshares/nioshares.conf
+echo "addnode=62.171.189.163" >> ~/.nioshares/nioshares.conf
+echo "addnode=186.118.237.242" >> ~/.nioshares/nioshares.conf
+echo "addnode=173.212.251.149" >> ~/.nioshares/nioshares.conf
+echo "addnode=62.171.155.87" >> ~/.nioshares/nioshares.conf
+echo "addnode=144.91.87.7" >> ~/.nioshares/nioshares.conf
+echo "addnode=173.249.7.25" >> ~/.nioshares/nioshares.conf
+echo "addnode=164.68.115.132" >> ~/.nioshares/nioshares.conf
+echo "addnode=62.171.146.218" >> ~/.nioshares/nioshares.conf
+echo "addnode=86.57.193.186" >> ~/.nioshares/nioshares.conf
+echo "addnode=187.15.233.218" >> ~/.nioshares/nioshares.conf
+echo "addnode=72.19.15.94" >> ~/.nioshares/nioshares.conf
+echo "addnode=72.19.15.172" >> ~/.nioshares/nioshares.conf
+echo "addnode=144.91.110.105" >> ~/.nioshares/nioshares.conf
+echo "addnode=207.180.249.77" >> ~/.nioshares/nioshares.conf
+echo "addnode=207.180.246.231" >> ~/.nioshares/nioshares.conf
+echo "addnode=136.144.171.201" >> ~/.nioshares/nioshares.conf
+
 
 
 echo " Iniciando Masternode..."

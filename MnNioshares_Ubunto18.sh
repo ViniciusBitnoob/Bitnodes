@@ -99,6 +99,13 @@ echo "addnode=144.91.110.105" >> ~/.nioshares/nioshares.conf
 echo "addnode=207.180.249.77" >> ~/.nioshares/nioshares.conf
 echo "addnode=207.180.246.231" >> ~/.nioshares/nioshares.conf
 echo "addnode=136.144.171.201" >> ~/.nioshares/nioshares.conf
+echo "addnode=173.249.7.25:21392" >> ~/.nioshares/nioshares.conf
+echo "addnode=72.19.15.172:21392" >> ~/.nioshares/nioshares.conf
+echo "addnode=173.212.251.149:21392" >> ~/.nioshares/nioshares.conf
+echo "addnode=144.91.87.7:21392" >> ~/.nioshares/nioshares.conf
+echo "addnode=62.171.146.218:21392" >> ~/.nioshares/nioshares.conf
+echo "addnode=72.19.15.94:21392" >> ~/.nioshares/nioshares.conf
+echo "addnode=207.180.224.211:21392" >> ~/.nioshares/nioshares.conf
 
 
 

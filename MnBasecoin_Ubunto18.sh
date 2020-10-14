@@ -46,27 +46,27 @@ sudo apt-get install libdb4.8-dev libdb4.8 ++ - dev
 echo " Limpando arquivos de instalações anteriores..."
 sleep 3
 cd
-~/nio/./nioshares-cli stop
-rm -r nio
-rm -r .nioshares
+~/bab/./basecoin-cli stop
+rm -r bab
+rm -r .basecoin
 
 
 echo " Instalando Node..."
 sleep 3
 cd
-mkdir nio
-cd nio
-wget https://github.com/nioshares/nioshares-coin/releases/download/V1.0.0.1/nioshares-daemon-linux.tar.gz
-wget https://github.com/nioshares/nioshares-coin/releases/download/V1.0.0.1/nioshares-qt-linux.tar.gz
-tar -xzvf nioshares-daemon-linux.tar.gz
-tar -xzvf nioshares-qt-linux.tar.gz
-rm -r nioshares-daemon-linux.tar.gz
-rm -r nioshares-qt-linux.tar.gz
-rm -r nioshares-qt
-rm -r nioshares-tx
-~/nio/./niosharesd &
+mkdir bab
+cd bab
+wget https://github.com/Basecoin-BAB/Basecoin-Core/releases/download/V1.0.0.0/basecoin-daemon-linux.tar.gz
+wget https://github.com/Basecoin-BAB/Basecoin-Core/releases/download/V1.0.0.0/basecoin-qt-linux.tar.gz
+tar -xzvf basecoin-daemon-linux.tar.gz
+tar -xzvf basecoin-qt-linux.tar.gz
+rm -r basecoin-daemon-linux.tar.gz
+rm -r basecoin-qt-linux.tar.gz
+rm -r basecoin-qt
+rm -r basecoin-tx
+~/bab/./basecoind &
 sleep 20
-~/nio/./nioshares-cli stop
+~/bab/./basecoin-cli stop
 
 ipvps=$(curl -s4 icanhazip.com)
 
@@ -75,48 +75,48 @@ echo $ipvps
 echo "Qual sua Genkey ?"
 read genkey
 
-echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.nioshares/nioshares.conf
-echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.nioshares/nioshares.conf
-echo "masternodeprivkey="$genkey >> ~/.nioshares/nioshares.conf
-echo "rpcallowip=127.0.0.1" >> ~/.nioshares/nioshares.conf
-echo "listen=1" >> ~/.nioshares/nioshares.conf
-echo "server=1" >> ~/.nioshares/nioshares.conf
-echo "daemon=1" >> ~/.nioshares/nioshares.conf
-echo "masternode=1" >> ~/.nioshares/nioshares.conf
-echo "masternodeaddr="$ipvps:15252 >> ~/.nioshares/nioshares.conf
-echo "maxconnections=36" >> ~/.nioshares/nioshares.conf
-echo "logtimestamps=1" >> ~/.nioshares/nioshares.conf
-echo "port=21392" >> ~/.nioshares/nioshares.conf
-addnode = 72.19.15.173
-addnode = 173.249.39.84
-addnode = 173.249.34.236
-addnode = 144.91.87.7
-addnode = 136.144.171.201
-addnode = 207.180.245.239
-addnode = 5.189.162.110
-addnode = 72.19.15.174
-addnode = 187.14.249.145
-addnode = 177.66.147.35
-addnode = 144.91.75.15
-addnode = 191.30.221.134
-addnode = 86.57.193.186
-addnode = 72.19.15.173
-addnode = 72.19.15.95
-addnode = 179.199.118.147
-addnode = 45.169.28.19
-addnode = 187.24.231.218
-addnode = 73.60.248.106
-addnode = 72.19.15.94
-addnode = 170.254.144.247
-whitelist = 173.249.39.84
-whitelist = 173.249.34.236
-whitelist = 144.91.87.7
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> ~/.basecoin/basecoin.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> ~/.basecoin/basecoin.conf
+echo "masternodeprivkey="$genkey >> ~/.basecoin/basecoin.conf
+echo "rpcallowip=127.0.0.1" >> ~/.basecoin/basecoin.conf
+echo "listen=1" >> ~/.basecoin/basecoin.conf
+echo "server=1" >> ~/.basecoin/basecoin.conf
+echo "daemon=1" >> ~/.basecoin/basecoin.conf
+echo "masternode=1" >> ~/.basecoin/basecoin.conf
+echo "masternodeaddr="$ipvps:22632 >> ~/.basecoin/basecoin.conff
+echo "maxconnections=36" >> ~/.basecoin/basecoin.conf
+echo "logtimestamps=1" >> ~/.basecoin/basecoin.conf
+echo "port=22632" >> ~/.basecoin/basecoin.conf
+echo "addnode=72.19.15.173" >> ~/.basecoin/basecoin.conf
+echo "addnode=173.249.39.84" >> ~/.basecoin/basecoin.conf
+echo "addnode=173.249.34.236" >> ~/.basecoin/basecoin.conf
+echo "addnode=144.91.87.7" >> ~/.basecoin/basecoin.conf
+echo "addnode=136.144.171.201" >> ~/.basecoin/basecoin.conf
+echo "addnode=207.180.245.239" >> ~/.basecoin/basecoin.conf
+echo "addnode=5.189.162.110" >> ~/.basecoin/basecoin.conf
+echo "addnode=72.19.15.174" >> ~/.basecoin/basecoin.conf
+echo "addnode=187.14.249.145" >> ~/.basecoin/basecoin.conf
+echo "addnode=177.66.147.35" >> ~/.basecoin/basecoin.conf
+echo "addnode=144.91.75.15" >> ~/.basecoin/basecoin.conf
+echo "addnode=191.30.221.134" >> ~/.basecoin/basecoin.conf
+echo "addnode=86.57.193.186" >> ~/.basecoin/basecoin.conf
+echo "addnode=72.19.15.173" >> ~/.basecoin/basecoin.conf
+echo "addnode=72.19.15.95" >> ~/.basecoin/basecoin.conf
+echo "addnode=179.199.118.147" >> ~/.basecoin/basecoin.conf
+echo "addnode=45.169.28.19" >> ~/.basecoin/basecoin.conf
+echo "addnode=187.24.231.218" >> ~/.basecoin/basecoin.conf
+echo "addnode=73.60.248.106" >> ~/.basecoin/basecoin.conf
+echo "addnode=72.19.15.94" >> ~/.basecoin/basecoin.conf
+echo "addnode=170.254.144.247" >> ~/.basecoin/basecoin.conf
+echo "whitelist=173.249.39.84" >> ~/.basecoin/basecoin.conf
+echo "whitelist=173.249.34.236" >> ~/.basecoin/basecoin.conf
+echo "whitelist=144.91.87.7" >> ~/.basecoin/basecoin.conf
 
 
 
 echo " Iniciando Masternode..."
 sleep 3
-~/nio/./niosharesd &
+~/bab/./basecoind &
 sleep 30
 echo "Qual o rótulo da sua Wallet do masternode?"
 read alias
@@ -134,7 +134,7 @@ echo "   "
 echo "      >>>>> USE O COMANDO A BAIXO AQUI NA VPS, SE O PRIMEIRO RESULTADO FOR 'true', SIGNIFICA QUE JA PODE INICIAR NO WINDOWNS. <<<<<"
 echo " >>>>> SE NÃO FOR 'true', USE O COMANDO DE TEMPOS EM TEMPOR ATÉ CONFIRMAR A INFORMAÇÃO, APOS ISSO, INICIE O MASTERNODE NO DESKTOP. <<<<<"
 echo "   "
-echo "~/nio/./nioshares-cli mnsync status"
+echo " ~/bab/./basecoin-cli mnsync status"
 echo "   "
 echo "   "
 echo "           >>>>> USE O COMANDO A BAIXO PARA INICIAR NO MASTERNODE NA DESKTOP WALLET! <<<<<"
@@ -146,11 +146,11 @@ echo "   "
 echo "      >>>>>SE A REPOSTA DO COMANDO NO CONSOLE DA SUA WALLET FOR 'Successfully', SIGNIFICA QUE O START FOI FEITO. <<<<<"
 echo " >>>>> USE O COMANDO A BAIXO, AQUI NA VPS PARA CONFIRMAR, SE TE RETORNAR ALGO COMO 'Successfully' ESTÁ FUNCIONANDO!!! <<<<<  "
 echo "   "
-echo " ~/nio/./nioshares-cli getmasternodestatus"
+echo " ~/bab/./basecoin-cli getmasternodestatus"
 echo "   "
 echo "     >>>> TE AJUDEI???? NOS AJUDE TAMBEM, FAÇA UMA DOAÇÃO, ASSIM NOS MOTIVA A ATUALIZAR E MELHORAR OS SCRIPTS!!!<<<<"
-echo "                          >>>>    WALLET NIO:  NfJvmMLBf8hnzwAr5odG3D7o2nyK84NRbW    <<<<"
+echo "                          >>>>    WALLET BAB:  BSjwuKcwmTuK6Nj77g67PuYMPhKa7RodB2    <<<<"
 echo "   "
 echo "Att. Vinicius Ferreiro - Canal Bitnoob"
 cd
-rm -r MnNioshares_Ubunto18.sh
+rm -r MnBasecoin_Ubunto18.sh

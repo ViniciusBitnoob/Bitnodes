@@ -126,7 +126,7 @@ echo "Qual o output do texid? 0 ou 1 ?"
 read output
 echo "   "
 echo "                             >>>>> SUA LINHA DE CONFIGURAÇÃO DE MASTERNODE É: <<<<<"
-echo $alias $ipvps:21392 $genkey $txid $output
+echo $alias $ipvps:22632 $genkey $txid $output
 sleep 5
 echo "   "
 echo "                        >>>>> COPIE E COLE-A NO SEU ARQUIVO DE CONFIGURAÇÃO DE MASTERNODE. <<<<<"
